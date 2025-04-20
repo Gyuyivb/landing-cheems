@@ -113,16 +113,31 @@ button{
     top: 20%;
     left: 700px;
     width: 200px;
+
+    animation:  2s video-content 0.5s ease-in-out;
 }
 .video .inside{
     width: 100%;
     background-color: var(--french-lilac);
     aspect-ratio: 16 / 9;
-    border-radius: 20%;
+    border-radius: 10%;
     overflow: hidden;
 }
 .inside img{
     width: 100%;
+}
+.video-title h3{
+    color: var(--dark-vanilla);
+    font-size: small;
+}
+@keyframes video-content {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
 }
 .side-content{
     display: grid;

@@ -1,5 +1,4 @@
-import fetch from "node-fetch";
-const url = 'https://youtube-v31.p.rapidapi.com/playlistItems?playlistId=PLetFUtrDqLjoII8CN1SuRomEf9GtMA0gg&part=snippet&maxResults=3';
+const API = 'https://youtube-v31.p.rapidapi.com/playlistItems?playlistId=PLetFUtrDqLjoII8CN1SuRomEf9GtMA0gg&part=snippet&maxResults=3';
 
 const videoContent = null || document.getElementById('video-content')
 const options = {
@@ -11,7 +10,7 @@ const options = {
 };
 
 // try {
-// 	const response = await fetch(url, options);
+// 	const response = await fetch(API, options);
 // 	const result = await response.text();
 // 	console.log(result);
 // } catch (error) {
@@ -27,21 +26,23 @@ async function fetchData(urlApi) {
 //funcion que se invoca a si misma
 (async () => {
     try{
-        const videos = await fetchData(url);
+        const videos = await fetchData(API);
         let view = `
         ${videos.items.map(video => `
-            <div class="video">
+            <div>
                 <div class="inside">
                     <img src="${video.snippet.thumbnails.high.url}" alt="${video.snippet.description}">
                 </div>
                 <div class="video-title">
                     <h3>
-                        <span></span>
                         ${video.snippet.title}
                     </h3>
                 </div>
             </div>
-            `).slice(0,1).join('')}
+            `).slice(0,2).join('')}
         `;
-    }catch {}
+        videoContent.innerHTML = view;
+    }catch(error) {
+        console.log(error);
+    }
 })();
