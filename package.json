@@ -4,7 +4,7 @@
   "description": "cheems landing page",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d src"
   },
   "repository": {
     "type": "git",
@@ -18,9 +18,9 @@
   "author": "gyuyi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Gyuyivb/landing-cheems/issues"
+    "url": "https://github.com/Gyuyivb/landing-cheems/"
   },
-  "homepage": "https://github.com/Gyuyivb/landing-cheems#readme",
+  "homepage": "https://github.com/Gyuyivb/landing-cheems",
   "dependencies": {
     "node-fetch": "^3.3.2"
   },
