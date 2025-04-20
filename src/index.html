@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="page">
+        <!-- Main Content -->
+        <section class="container">
+            <nav class="navbar">
+                <div class="navbar__content">
+                    <img src="./1p.png" alt="">
+                    <ul>
+                        <li><a href="/">EXCLUSIVOS</a></li>
+                        <li><a href="/">NUEVOS</a></li>
+                        <li><a href="/">GIFT CARDS</a></li>
+                        <li><a href="/">FIND A STORE</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <section class="main-content">
+                <p>Diseña tu</p>
+                <h1>Cheems!</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, aliquid nam. Labore, iste maiores. Ullam asperiores repellendus omnis, modi dolor error officia assumenda aut, praesentium eos perferendis soluta quis officiis.</p>
+            </section>
+            <div class="video">
+                <div class="inside">
+                    <img src="./cheemsbogado.png" alt="">
+                </div>
+                <div class="video-title">
+                    <h3>
+                        <span></span>
+                    </h3>
+                </div>
+            </div>
+            <section class="side-content">
+                <div></div>
+                <p>Cheems</p>
+                <img src="./shibachems-jump.png" alt="">
+            </section>
+
+            <section class="footer">
+                <div id="button1">
+                    <img src="./cheemsbogado.png" alt="cheemsbogado">
+                </div>
+                <div id="button2">
+                    <img src="./cheemwich.png" alt="cheemwich">
+                </div>
+                <div id="button3">
+                    <img src="./dark_cheems.png" alt="dark_cheems">
+                </div>
+            </section>
+        </section>
+
+
+        <!-- Loader -->
+        <section class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+
+        <!-- Modal -->
+        <section class='modal hidden'>
+            <div class="modal__content">
+                <img class="modal__content--close" src="https://img.icons8.com/?size=100&id=AqDEb8mCIrk9&format=png&color=000000" alt="close">
+                <div class="modal__content--slider">
+                    <input type="radio" name="slider-1" id="radio-1" checked>
+                    <input type="radio" name="slider-1" id="radio-2">
+                    <input type="radio" name="slider-1" id="radio-3">
+                    <div class="cards">
+                        <label for="radio-1" id="card-1" class="card">
+                            <img id="img-1" src="" alt="">
+                        </label>
+                        <label for="radio-2" id="card-2" class="card">
+                            <img id="img-2" src="" alt="">
+                        </label>
+                        <label for="radio-3" id="card-3" class="card">
+                            <img id="img-3" src="" alt="">
+                        </label>
+                    </div>
+                </div>
+                <button>Lo quiero!</button>
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+    const modal = document.querySelector('.modal');
+    const closeButton = document.querySelector('.modal__content--close');
+
+    const button1 = document.querySelector('#button1');
+    const button2 = document.querySelector('#button2');
+    const button3 = document.querySelector('#button3');
+
+    const buttons = Array.of(button1, button2, button3);
+
+    buttons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            modal.classList.remove('hidden')
+            modal.classList.add('visible')
+            handleClick(index)
+        })
+    })
+    
+    closeButton.addEventListener('click', () => {
+        modal.classList.remove('visible')
+        modal.classList.add('hidden')
+    })
+    const Imgs = [
+        ["./assets/1.png", "./assets/2.png", "./assets/3.png"],
+        ["./assets/4.png", "./assets/5.png", "./assets/6.png"],
+        ["./assets/7.jpg", "./assets/8.png", "./assets/9.jpg"],
+    ]
+
+    function handleClick( id ){
+        console.log('click', id)
+        var imagen_1 = document.getElementById("img-1");
+        var imagen_2 = document.getElementById("img-2");
+        var imagen_3 = document.getElementById("img-3");
+
+        imagen_1.src = Imgs[id][0];
+        imagen_2.src = Imgs[id][1];
+        imagen_3.src = Imgs[id][2];
+    }
+    
+</script>
+</html>
