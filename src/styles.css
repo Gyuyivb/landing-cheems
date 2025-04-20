@@ -113,7 +113,7 @@ button{
     top: 20%;
     left: 700px;
     width: 200px;
-
+    
     animation:  2s video-content 0.5s ease-in-out;
 }
 .video .inside{
@@ -179,7 +179,7 @@ button{
 }
 @keyframes cheems-img {
     0%{
-        transform: translateX(600px);
+        transform: translateX(800px);
     }
     100%{
         transform: translateX(0px);
