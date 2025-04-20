@@ -1,0 +1,24 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "cheems landing page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gyuyivb/landing-cheems.git"
+  },
+  "keywords": [
+    "Javascript",
+    "html",
+    "css"
+  ],
+  "author": "gyuyi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gyuyivb/landing-cheems/issues"
+  },
+  "homepage": "https://github.com/Gyuyivb/landing-cheems#readme"
+}
