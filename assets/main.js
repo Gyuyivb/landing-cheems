@@ -34,9 +34,9 @@ async function fetchData(urlApi) {
                     <img src="${video.snippet.thumbnails.high.url}" alt="${video.snippet.description}">
                 </div>
                 <div class="video-title">
-                    <h3>
+                    <a href="https://www.youtube.com/shorts/${video.snippet.resourceId.videoId}">
                         ${video.snippet.title}
-                    </h3>
+                    </a>
                 </div>
             </div>
             `).slice(0,2).join('')}

@@ -126,7 +126,8 @@ button{
 .inside img{
     width: 100%;
 }
-.video-title h3{
+.video-title a{
+    text-decoration: none;
     color: var(--dark-vanilla);
     font-size: small;
 }
